@@ -23,9 +23,7 @@ namespace WindowsForms
         private ListBox MessageListBox;
         private Label MessageLabel;
         private Button ShowMessageButton;
-      
 
-        
 
         public MyForm()
         {
@@ -59,7 +57,11 @@ namespace WindowsForms
 
 
             ShowMessageButton.Click += MyForm_Click;
-            MyForm_Load(this, EventArgs.Empty); 
+            MyForm_Load(this, EventArgs.Empty);
+
+
+
+            FormClosing += MyForm_FormClosing;
         }
 
         private void MyForm_Load(object sender, EventArgs e)
@@ -87,9 +89,16 @@ namespace WindowsForms
         private void MyForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             var message = "Are you sure that you want to close the form?";
-            if(MessageBox.Show(message, this.Text, MessageBoxButtons.YesNo) == DialogResult.OK)
+            var closedApplication = "Congrats you are successfully closing the application";
+            DialogResult dg = MessageBox.Show(message, this.Text, MessageBoxButtons.YesNo);
+            if (dg == DialogResult.No)
             {
+                e.Cancel = true;    
 
+            }
+            if(dg == DialogResult.Yes)
+            {
+                MessageBox.Show(closedApplication, this.Text);
             }
         }
     }
