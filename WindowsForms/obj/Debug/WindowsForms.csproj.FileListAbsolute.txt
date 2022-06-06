@@ -66,3 +66,5 @@ C:\Users\bailey.heinen\Desktop\SimpleProject\WindowsForms\Windows-Forms-Project\
 C:\Users\bailey.heinen\Desktop\SimpleProject\WindowsForms\Windows-Forms-Project\WindowsForms\bin\Debug\ru\DevExpress.Pdf.v21.2.Core.resources.dll
 C:\Users\bailey.heinen\Desktop\SimpleProject\WindowsForms\Windows-Forms-Project\WindowsForms\obj\Debug\WindowsForms.ConfirmDialog.resources
 C:\Users\bailey.heinen\Desktop\SimpleProject\WindowsForms\Windows-Forms-Project\WindowsForms\obj\Debug\WindowsForms.csproj.CopyComplete
+C:\Users\bailey.heinen\Desktop\SimpleProject\WindowsForms\Windows-Forms-Project\WindowsForms\obj\Debug\WindowsForms.Form1.resources
+C:\Users\bailey.heinen\Desktop\SimpleProject\WindowsForms\Windows-Forms-Project\WindowsForms\obj\Debug\WindowsForms.Properties.Resources.resources

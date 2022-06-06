@@ -11,8 +11,13 @@ namespace WindowsForms
     {
         public static void Main()
         {
-            var form = new MyForm();
-            Application.Run(form);
+            /*This is one example of an application*/
+            //var form = new MyForm();
+            //Application.Run(form);
+
+            /*This is another example of an application*/
+            var form1 = new Form1();
+            Application.Run(form1);
         }
     }
 }
