@@ -59,8 +59,6 @@ namespace WindowsForms
             ShowMessageButton.Click += MyForm_Click;
             MyForm_Load(this, EventArgs.Empty);
 
-
-
             FormClosing += MyForm_FormClosing;
         }
 
