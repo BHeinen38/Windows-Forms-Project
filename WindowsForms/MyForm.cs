@@ -84,17 +84,37 @@ namespace WindowsForms
             MessageBox.Show("Congrats you clicked the button", this.Text);
         }
 
+
+        //This is one way to do it without custom dialog
+        //private void MyForm_FormClosing(object sender, FormClosingEventArgs e)
+        //{
+        //    var message = "Are you sure that you want to close the form?";
+        //    var closedApplication = "Congrats you are successfully closing the application";
+        //    DialogResult dg = MessageBox.Show(message, this.Text, MessageBoxButtons.YesNo);
+        //    if (dg == DialogResult.No)
+        //    {
+        //        e.Cancel = true;    
+
+        //    }
+        //    if(dg == DialogResult.Yes)
+        //    {
+        //        MessageBox.Show(closedApplication, this.Text);
+        //    }
+        //}
+        
+
+        //This is with a Custom Dialog that I created
         private void MyForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            var message = "Are you sure that you want to close the form?";
+            var dialog = new ConfirmDialog();
             var closedApplication = "Congrats you are successfully closing the application";
-            DialogResult dg = MessageBox.Show(message, this.Text, MessageBoxButtons.YesNo);
-            if (dg == DialogResult.No)
+            dialog.ShowDialog();
+            if (dialog.DialogResult == DialogResult.No)
             {
-                e.Cancel = true;    
+                e.Cancel = true;
 
             }
-            if(dg == DialogResult.Yes)
+            if (dialog.DialogResult == DialogResult.Yes)
             {
                 MessageBox.Show(closedApplication, this.Text);
             }
